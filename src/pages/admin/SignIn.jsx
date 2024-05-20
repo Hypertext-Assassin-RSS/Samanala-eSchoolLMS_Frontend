@@ -51,7 +51,7 @@ const SignIn = () => {
               {/* </Link> */}
 
               <p className="2xl:px-20 nexa-font">
-                Manage The whole of theora here
+                Manage The whole of Samanala eSchool here
               </p>
 
               <span className="mt-15 inline-block">
@@ -183,7 +183,7 @@ const SignIn = () => {
             <div className="w-full p-4 sm:p-12.5 xl:p-17.5">
               {/* <span className="mb-1.5 block font-medium">Start for free</span> */}
               <h2 className="mb-9 text-2xl font-bold text-black dark:text-white sm:text-title-xl2">
-                Sign In to Theora Admin
+                Sign In to Samanala eSchool Admin
               </h2>
 
               <form onSubmit={handleSubmit(handleFormSubmit)}>

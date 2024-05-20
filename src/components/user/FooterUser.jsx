@@ -33,7 +33,7 @@ function FooterUser() {
                 <Footer.Divider />
                 <Footer.Copyright
                     href="/"
-                    by="Theora Learning™"
+                    by="Samanala eSchool™"
                     year={new Date().getFullYear()}
                 />
             </div>

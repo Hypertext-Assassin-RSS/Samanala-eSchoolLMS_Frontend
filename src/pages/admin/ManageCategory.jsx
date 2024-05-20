@@ -63,7 +63,7 @@ const FormElements = () => {
       <div className="relative overflow-hidden bg-white shadow-1 dark:bg-gray-800 sm:rounded-lg mb-5 scroll-smooth">
         <div className="flex-row items-center justify-between p-4 space-y-3 sm:flex sm:space-y-0 sm:space-x-4">
           <div>
-            <h5 className="mr-3 font-semibold dark:text-white">Theora Categories</h5>
+            <h5 className="mr-3 font-semibold dark:text-white">Samanala eSchool Categories</h5>
             <p className="text-gray-500 dark:text-gray-400">Manage all your existing categories or add a new one</p>
           </div>
           <button

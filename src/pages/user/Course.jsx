@@ -340,7 +340,7 @@ export default function Course() {
 													setIsOpen={setIsOpen}
 													modalData={{
 														title: 'Confirm Payment',
-														description: 'By clicking "Confirm" you are accepting theora payment procedures and proceed to payment',
+														description: 'By clicking "Confirm" you are accepting Samanala eSchool payment procedures and proceed to payment',
 														onClick: () => handleEnrollCourse(course._id, 'fake')
 													}}
 												/>

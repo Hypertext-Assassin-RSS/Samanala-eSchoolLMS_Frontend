@@ -34,7 +34,7 @@ function UpdateCourse() {
           <Loading />
           :
           <>
-            <SectionTitle title={course?.title} description={`Providing theora course management tool - Manage your ${course?.title} course`} />
+            <SectionTitle title={course?.title} description={`Providing Samanala eSchool course management tool - Manage your ${course?.title} course`} />
             <HorizontalRule />
             <div className="flex nexa-font p-3">
 

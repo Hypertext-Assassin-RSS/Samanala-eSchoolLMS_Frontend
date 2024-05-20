@@ -23,7 +23,7 @@ function HeroTutor() {
         <div className='flex items-stretch gap-1 md:gap-5 flex-wrap md:flex-nowrap md:flex-row'>
           <TopTutors className='flex-1' />
           {/* <div className='flex-1'> */}
-          {/* <SectionTitle title='Testimonials' description='What Our Tutors Say About Theora' /> */}
+          {/* <SectionTitle title='Testimonials' description='What Our Tutors Say About Samanala eSchool' /> */}
           <TutorsReview className='flex-1' />
           {/* </div> */}
         </div>
@@ -39,7 +39,7 @@ function HeroTutor() {
             <p className="mb-5 text-center text-base text-gray-500 dark:text-gray-400 sm:text-lg font-normal nexa-font px-10">
               Our user-friendly platform makes it easy to create and manage courses on any subject,
               so you can focus on what you do best: teaching. Get started today and join the growing
-              community of educators on Theora
+              community of educators on Samanala eSchool
             </p>
             <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
               <Link

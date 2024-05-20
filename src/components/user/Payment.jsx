@@ -36,7 +36,7 @@ function Payment({ children, courseId, setIsEnrolled }) {
 			key: "rzp_test_L5RIFMQfLKhSkl", // Key ID generated from the Dashboard
 			amount: amount.toString(),
 			currency: currency,
-			name: "Theora Learning",
+			name: "Samanala eSchool",
 			description: "Complete the payment for your course",
 			order_id: order_id,
 			handler: async function (response) {

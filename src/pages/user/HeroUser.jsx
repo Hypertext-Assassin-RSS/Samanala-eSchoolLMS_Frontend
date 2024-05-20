@@ -53,7 +53,7 @@ function HeroUser() {
             <Logo size={2}/>
             <figure className="mt-10">
               <blockquote className="text-center text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
-                <p className="nexa-font">“At Theora, we're dedicated to fostering a culture of curiosity, creativity, and growth – both for our students and our team. We believe that learning is a lifelong journey, 
+                <p className="nexa-font">“At Samanala eSchool, we're dedicated to fostering a culture of curiosity, creativity, and growth – both for our students and our team. We believe that learning is a lifelong journey,
                 and we're committed to providing our students with the <span className="text-green-500">highest-quality educational resources</span>."</p>
               </blockquote>
               <figcaption className="mt-10">
@@ -63,7 +63,7 @@ function HeroUser() {
                   <svg viewBox="0 0 2 2" width={3} height={3} aria-hidden="true" className="fill-gray-900">
                     <circle cx={1} cy={1} r={1} />
                   </svg>
-                  <div className="text-gray-600">CEO of Theora</div>
+                  <div className="text-gray-600">CEO of Samanala eSchool</div>
                 </div>
               </figcaption>
             </figure>

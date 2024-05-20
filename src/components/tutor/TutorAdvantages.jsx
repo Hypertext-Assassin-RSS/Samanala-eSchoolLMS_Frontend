@@ -12,7 +12,7 @@ const features = [
     {
         name: 'Global Reach',
         description:
-            'With Theora, you can connect with learners from around the world and make a positive impact on their lives',
+            'With Samanala eSchool, you can connect with learners from around the world and make a positive impact on their lives',
         icon: ChartBarIcon,
     },
     {
@@ -32,12 +32,12 @@ const features = [
 export default function TutorAdvantages() {
     return (
         <>
-            <SectionTitle title='Why theora?' description='Empower Your Teaching With Theora.' />
+            <SectionTitle title='Why Samanala eSchool?' description='Empower Your Teaching With Samanala eSchool.' />
             <HorizontalRule />
             <div className="bg-white py-6 sm:py-20">
                 <div className="mx-auto max-w-7xl px-6 lg:px-8">
                     <div className="mx-auto max-w-2xl lg:text-center">
-                        <h2 className="text-xs sm:text-base font-semibold leading-7 text-center text-amber-600">Create and Share Your Expertise with Theora</h2>
+                        <h2 className="text-xs sm:text-base font-semibold leading-7 text-center text-amber-600">Create and Share Your Expertise with Samanala eSchool</h2>
                         <p className="mt-2 text-md font-bold tracking-tight text-center  text-gray-900 sm:text-4xl">
                             Join our global community of tutors and make a difference in learners' lives
                         </p>

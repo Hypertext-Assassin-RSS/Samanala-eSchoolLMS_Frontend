@@ -30,9 +30,9 @@ export default function Hero() {
         "Empowering minds to reach new heights.",
         "Where ideas come to life and minds thrive.",
         "Nurturing minds to create a brighter tomorrow.",
-        "Theora: Unlocking the potential of every mind.",
-        "Enlighten your mind with Theora's limitless knowledge.",
-        "Explore the wonders of the world with Theora."
+        "Unlocking the potential of every mind.",
+        "Enlighten your mind with Samanala eSchool's limitless knowledge.",
+        "Explore the wonders of the world with Samanala eSchool."
       ],
       typeSpeed: 70,
       backDelay: 700,
@@ -149,10 +149,10 @@ export default function Hero() {
           />
         </div> */}
 
-        <div className="mx-auto max-w-2xl py-6 pt-6 sm:pt-24 lg:pt-28">
+        <div className="mx-auto max-w-3xl py-6 pt-6 sm:pt-24 lg:pt-28">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
             <div className="relative rounded-full px-3 py-1 text-md leading-6 text-gray-600 ring-1 ring-gray-900/30 hover:ring-gray-900/30">
-              Teach, inspire, and grow with Theora's dynamic learning platform. {' '}
+              Teach, inspire, and grow with Samanala eSchool's dynamic learning platform. {' '}
               <Link to="/tutor" className="font-semibold text-indigo-600">
                 <span className="absolute inset-0" aria-hidden="true" />
                 Join Our Team<span aria-hidden="true">&rarr;</span>

@@ -27,7 +27,7 @@ function SignIn() {
     }
     if (newUser) {
       toast.dismiss()
-      toast.success('Welcome to theora! Please login', {
+      toast.success('Welcome to Samanala eSchool! Please login', {
         duration: 2000
       })
     }
@@ -74,7 +74,7 @@ function SignIn() {
     //set isAuth
     localStorage.setItem('isAuth', true)
     //success notification
-    toast.success(`Hey ${user.name}, Welcome back to theora!`, {
+    toast.success(`Hey ${user.name}, Welcome back to Samanala eSchool!`, {
       duration: 6000
     })
 
