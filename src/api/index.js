@@ -26,8 +26,10 @@ API.interceptors.response.use(
         // Do something with the response error
         console.log(error)
         toast.dismiss()
-        if (error?.code === 'ERR_NETWORK' || error?.code === 'ERR_BAD_RESPONSE') {
+        if (error?.code === 'ERR_NETWORK') {
             toast.error('Oops! it seems that the server is not connected')
+        } else if (error?.code === 'ERR_BAD_RESPONSE'){
+            toast.error('Oops! Bad Response')
         }
         if (error?.response?.data?.err?.name === 'TokenMissingError') {
             console.log('Token Missing')

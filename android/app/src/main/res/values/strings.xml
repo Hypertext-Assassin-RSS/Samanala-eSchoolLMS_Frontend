@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Samanala eSchool</string>
+    <string name="title_activity_main">Samanala eSchool</string>
+    <string name="package_name">lk.samanala.eschool</string>
+    <string name="custom_url_scheme">lk.samanala.eschool</string>
+</resources>
