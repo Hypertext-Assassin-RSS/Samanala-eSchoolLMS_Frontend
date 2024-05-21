@@ -5,7 +5,7 @@ import SectionTitle from '../../components/tutor/SectionTitle'
 import HorizontalRule from '../../components/common/HorizontalRule'
 import Loading from '../../components/common/Loading'
 import CreateLesson from '../../components/tutor/CreateLessonModal'
-import { Badge } from 'flowbite-react'
+import {Badge, Button} from 'flowbite-react'
 
 function UpdateCourse() {
 
@@ -13,6 +13,7 @@ function UpdateCourse() {
 
   const [course, setCourse] = useState({})
   const [isLoading, setIsLoading] = useState(true)
+    const [isCreateLessonModalOpen, setIsCreateLessonModalOpen] = useState(false);
 
   useEffect(() => {
     setIsLoading(true)
@@ -27,7 +28,11 @@ function UpdateCourse() {
       })
   }, [])
 
-  return (
+    const openNewLesson = () => {
+        setIsCreateLessonModalOpen(true);
+    };
+
+    return (
     <>
       {
         isLoading ?
@@ -56,7 +61,14 @@ function UpdateCourse() {
               <div className='flex-1 p-10'>
                 <img src="" alt="" />
                 <div className='flex justify-center'>
-                  <CreateLesson course={course} />
+                    <React.Fragment>
+                        <Button onClick={openNewLesson} color="warning">
+                            Add New Lesson
+                        </Button>
+                        {isCreateLessonModalOpen && (
+                            <CreateLesson course={course} closeModal={() => setIsCreateLessonModalOpen(false)} />
+                        )}
+                    </React.Fragment>
                 </div>
 
                 {/* upload file*/}
@@ -73,9 +85,9 @@ function UpdateCourse() {
 
                 {/* Lessons  */}
                 {course.lessons.length ?
-                  <>
+                  <div>
                     <h1 className='text-amber-500 drop-shadow-sm nexa-font text-start  text-xl  md:text-1xl ml-3 mt-10 mb-10 font-black'>View Lessons</h1>
-                  </>
+                  </div>
                   :
                   null
                 }

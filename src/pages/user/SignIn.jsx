@@ -28,14 +28,14 @@ function SignIn() {
     if (newUser) {
       toast.dismiss()
       toast.success('Welcome to Samanala eSchool! Please login', {
-        duration: 2000
+        duration: 1000
       })
     }
     if (logout) {
       toast.dismiss()
       toast.success('Missing You Already, Come Back Soon!', {
         icon: '😪',
-        duration: 4000
+        duration: 2000
       })
     }
     if (accessedPrivate) {
@@ -75,7 +75,7 @@ function SignIn() {
     localStorage.setItem('isAuth', true)
     //success notification
     toast.success(`Hey ${user.name}, Welcome back to Samanala eSchool!`, {
-      duration: 6000
+      duration: 1000
     })
 
     //set global user state
