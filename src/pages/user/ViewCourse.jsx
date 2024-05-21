@@ -7,6 +7,8 @@ import { Link, useParams } from 'react-router-dom'
 import timeAgo from '../../utils/timeAgo'
 import { Disclosure } from '@headlessui/react'
 import { getLessonDetailsAPI } from '../../api/common'
+import {Bars3Icon} from "@heroicons/react/24/outline/index.js";
+import QuizForLesson from "../../components/user/QuizForLesson.jsx";
 
 //join classes by filtering conditions
 function classNames(...classes) {
@@ -18,6 +20,7 @@ export default function ViewCourse() {
 	const [isLoading, setIsLoading] = useState(true)
 	const [fomattedDate, setFomattedDate] = useState({})
 	const [lesson, setLesson] = useState('')
+	const [showQuizModal, setShowQuizModal] = useState(false);
 
 	// const user = getUser()
 	const params = useParams()
@@ -26,6 +29,8 @@ export default function ViewCourse() {
 
 	//get course details by id in params
 	useEffect(() => {
+
+
 		(async () => {
 			const courseDetails = await getCourseDetailsAPI(params.id)
 			setCourse(courseDetails.data.data)
@@ -95,12 +100,27 @@ export default function ViewCourse() {
 							<h1 className='text-3xl'>{lesson.title}</h1>
 							<span className='text-xl'>{lesson.description}</span>
 						</div>
-
 						<HorizontalRule />
 						<div className='text-justify'>
 							{/* <h1 className='text-2xl ml-3 pb-4'>Description</h1> */}
 							<span className='text-justify'>{course.about}</span>
 						</div>
+						<>
+							<div className='mt-5'>
+								<button
+									onClick={() => setShowQuizModal(true)}
+									type='button'
+									className='rounded-md bg-indigo-600 px-3 py-2 text-lg font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
+									View Quiz For Lesson {lesson.title}
+								</button>
+							</div>
+							{/* Quiz Modal */}
+							<QuizForLesson
+								isOpen={showQuizModal}
+								onClose={() => setShowQuizModal(false)}
+								quizzes={lesson.quizzes}
+							/>
+						</>
 
 					</div>
 					{/* left section 1 */}
@@ -156,8 +176,6 @@ export default function ViewCourse() {
 
 					<div className="rounded-2xl bg-white py-5 text-center ring-1 ring-inset ring-gray-900/5 lg:flex lg:flex-col lg:justify-center lg:pb-16">
 						<div className='px-5'>
-
-							{/* course title,tagline and date */}
 							<div className='md:ml-5 flex justify-between'>
 								<div>
 									<h3 className='md:text-2xl '>Total Lessons - {course?.lessons?.length}</h3>
@@ -168,11 +186,9 @@ export default function ViewCourse() {
 								</div>
 							</div>
 							<HorizontalRule />
-
 							{/* lessons description and thumbnail */}
 							<div className="w-full md:px-4 ">
 								<div className="mx-auto w-full rounded-2xl bg-white">
-
 									{course.lessons ?
 										course?.lessons.map((lesson, index) => (
 											// lesson
@@ -202,6 +218,7 @@ export default function ViewCourse() {
 															</div>
 															<div>{timeAgo(lesson.createdAt)} ago</div>
 														</Disclosure.Panel>
+
 													</>
 												)}
 											</Disclosure>
