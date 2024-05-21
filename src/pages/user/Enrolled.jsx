@@ -36,7 +36,7 @@ export default function Enrolled() {
 								<div
 									key={course._id}
 									// style={{ flexShrink: 0, scrollSnapAlign: 'start' }}
-									className="max-w-sm block hover:shadow-lg duration-300 bg-white border overflow-hidden border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ml-10">
+									className="max-w-sm block hover:shadow-lg duration-300 bg-white border overflow-hidden border-gray-200  rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 ml-10 w-fit">
 									<div className='overflow-hidden '>
 										<Link to={`/courses/enrolled/${course._id}`}>
 											<img className="rounded-t-lg duration-300 scale-105 min-h-[11rem] object-cover hover:scale-100" src={course.thumbnailURL} alt="product image" />

@@ -15,7 +15,7 @@ function FooterUser() {
                     /> */}
                     <Logo size={1.5} />
 
-                    <Footer.LinkGroup>
+                    <Footer.LinkGroup className="justify-center">
                         <Footer.Link href="#">
                             About
                         </Footer.Link>
