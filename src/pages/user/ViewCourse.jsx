@@ -119,6 +119,7 @@ export default function ViewCourse() {
 								isOpen={showQuizModal}
 								onClose={() => setShowQuizModal(false)}
 								quizzes={lesson.quizzes}
+								lesson={lesson}
 							/>
 						</>
 

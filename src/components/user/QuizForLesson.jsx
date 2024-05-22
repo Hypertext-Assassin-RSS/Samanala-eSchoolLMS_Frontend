@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import { Disclosure } from '@headlessui/react';
+import { submitQuiz } from '../../api/user'
+import {toast} from "react-hot-toast";
 
-const QuizForLesson = ({ isOpen, onClose, quizzes }) => {
+const QuizForLesson = ({ isOpen, onClose, quizzes , lesson}) => {
     const [selectedAnswers, setSelectedAnswers] = useState({});
     const [check, setCheck] = useState(false);
 
@@ -28,8 +30,25 @@ const QuizForLesson = ({ isOpen, onClose, quizzes }) => {
             });
         })
 
+        const body = {
+            lessonId: lesson._id,
+            selectedAnswers,
+            correctCount
+        }
+
+        submitQuiz(body)
+            .then((respons) => {
+                if (respons.status === 200){
+                    toast.success('Quiz Submitted!')
+                } else {
+                    toast.error('Error')
+                }
+                console.log(respons)
+            })
+
         console.log('Selected Answers:', selectedAnswers);
         console.log('Correct Answers:', correctCount);
+        console.log('Body:', body);
         //alert(`You got ${correctCount} out of ${quizzes.length} correct!`);
         onClose();
     };
@@ -64,7 +83,7 @@ const QuizForLesson = ({ isOpen, onClose, quizzes }) => {
                             Complete Quiz
                         </h2>
                         <span className="text-sm font-thin text-gray-500">
-                            Select Only One Answer Per Quiz
+                            Select Only One Answer Per Quiz!
                         </span>
                         <div>
                             {quizzes ? quizzes.map((quiz, index) => (
