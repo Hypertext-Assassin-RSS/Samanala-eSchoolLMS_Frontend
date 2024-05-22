@@ -39,6 +39,7 @@ const isEnrolledInCourseAPI = courseId => API.get(`/user/details/enrolled/${cour
 const getAllOrdersByUserAPI = () => API.get(`/user/orders`)
 
 const getUserEnrolledCoursesAPI = () => API.get('/user/courses/enroll')
+const submitQuiz = (body) => API.post('/user/quiz/submit', body)
 
 const handleLogOutAPI = () => API.delete('/auth/logout')
 
@@ -56,5 +57,6 @@ export {
     getAllOrdersByUserAPI,
     userSignInAPI,
     userSignUpAPI,
-    getSignedInUserAPI
+    getSignedInUserAPI,
+    submitQuiz
 }
